@@ -12,7 +12,10 @@ env:
   - NODE_VERSION=10.15.3
 
 before_install:
-- rm -r node_modules
+- ls
+- ls $TRAVIS_BUILD_DIR
+- ls $TRAVIS_BUILD_DIR/ExpoDetoxTravis
+- rm -r $TRAVIS_BUILD_DIR/ExpoDetoxTravis/node_modules
 
 install:
 - brew tap wix/brew
