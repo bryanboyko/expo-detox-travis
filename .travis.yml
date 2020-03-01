@@ -7,7 +7,7 @@ branches:
 
 env:
   global:
-  - NODE_VERSION=stable
+  - NODE_VERSION=10.15.3
 
 install:
 - brew tap wix/brew
@@ -18,8 +18,8 @@ install:
 - nvm use $NODE_VERSION
 - nvm alias default $NODE_VERSION
 
-- npm install react-native-cli
-- npm install detox-cli
+- npm install -g react-native-cli
+- npm install -g detox-cli
 
 script:
 - detox build --configuration ios.sim
