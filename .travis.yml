@@ -11,10 +11,6 @@ env:
   global:
   - NODE_VERSION=10.15.3
 
-before_install:
-- ls
-- ls $TRAVIS_BUILD_DIR
-- rm -r $TRAVIS_BUILD_DIR/node_modules
 
 install:
 - brew tap wix/brew
@@ -25,6 +21,7 @@ install:
 - nvm use $NODE_VERSION
 - nvm alias default $NODE_VERSION
 
+- rm -r $TRAVIS_BUILD_DIR/node_modules
 - npm install react-native-cli
 - npm install detox-cli
 
