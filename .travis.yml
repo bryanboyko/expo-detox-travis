@@ -14,8 +14,7 @@ env:
 before_install:
 - ls
 - ls $TRAVIS_BUILD_DIR
-- ls $TRAVIS_BUILD_DIR/ExpoDetoxTravis
-- rm -r $TRAVIS_BUILD_DIR/ExpoDetoxTravis/node_modules
+- rm -r $TRAVIS_BUILD_DIR/node_modules
 
 install:
 - brew tap wix/brew
