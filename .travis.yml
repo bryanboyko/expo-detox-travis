@@ -5,8 +5,7 @@ branches:
   only:
   - master
 
-cache:
-  npm: false
+cache: false
 
 env:
   global:
