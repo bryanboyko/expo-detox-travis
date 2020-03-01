@@ -1,4 +1,5 @@
-language: objective-c
+language: node_js
+os: osx
 osx_image: xcode8.3
 
 branches:
