@@ -6,27 +6,33 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "node_modules/.bin/jest test/**/*.spec.js"
+    "test": "jest"
   },
   "dependencies": {
-    "detox": "^15.4.1",
-    "detox-expo-helpers": "^0.6.0",
     "expo": "~36.0.0",
-    "expo-detox-hook": "^1.0.10",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-testing-library": "^1.12.0",
-    "react-native-web": "~0.11.7",
-    "react-test-renderer": "^16.13.0"
+    "react-native-web": "~0.11.7"
   },
   "devDependencies": {
+    "detox": "^15.4.1",
+    "detox-expo-helpers": "^0.6.0",
+    "expo-detox-hook": "^1.0.10",
     "@babel/core": "^7.0.0",
     "babel-preset-expo": "~8.0.0",
-    "jest-expo": "^36.0.1"
+    "jest-expo": "^36.0.1",
+    "react-test-renderer": "^16.13.0"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|@sentry/.*|sentry-expo|native-base|react-native-multi-slider|@ptomasroos/.*)"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js?(x)"
+    ]
   },
   "detox": {
     "test-runner": "jest",
